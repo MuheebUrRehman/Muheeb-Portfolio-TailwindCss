@@ -5,7 +5,6 @@ import React, { useState, MouseEvent } from "react";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("education");
-
   const handleTabClick = (e: MouseEvent, tab: string) => {
     e.preventDefault();
     setActiveTab(tab);
@@ -13,9 +12,9 @@ export default function About() {
 
   return (
     <section className="w-screen bg-[#20c997]" id="about-section">
-      <div className="flex justify-around items-center h-[90vh]">
+      <div className="2xl:h-[60vh] flex justify-around items-center h-[90vh] flex-col md:flex-row">
         <Image src="/about-pic.png" alt="" width={400} height={400} />
-        <div className="w-[50%] flex flex-col justify-between h-[50%]">
+        <div className="2xl:h-[60%] 2xl:w-[50%] md:w-[50%] flex flex-col justify-between md:h-[50%] w-[80%] h-[40%]">
           <h1 className="text-3xl text-[#343a40] border-b-2 border-b-[#007bff]">
             About me
           </h1>

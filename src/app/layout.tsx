@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Poppins, Roboto } from "next/font/google";
-// import { config } from "@fortawesome/fontawesome-svg-core";
-// import "@fortawesome/fontawesome-svg-core/styles.css"; // Import Font Awesome CSS
-// config.autoAddCss = false; // Disable auto-adding CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${poppins.variable} ${roboto.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

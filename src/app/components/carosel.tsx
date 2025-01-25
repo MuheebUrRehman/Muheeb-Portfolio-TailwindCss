@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Carosel() {
   return (
     <section className="w-screen">
-      <div className="w-[90%] flex justify-between items-center mx-auto h-[80vh]">
-        <div className="flex flex-col h-[70%] justify-between w-[42%]">
+      <div className="w-[90%] 2xl:h-[60vh] flex justify-between items-center mx-auto h-[80vh] flex-col md:flex-row">
+        <div className="2xl:h-[60%] 2xl:w-[60%] flex flex-col md:h-[70%] justify-between h-[50%] md:w-[42%] w-[80%]">
           <h3 className="text-2xl text-[#f8f9fa]">
             Hi there! I’m <span className="text-[#20c997]">Muheeb</span>,
           </h3>
